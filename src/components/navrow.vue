@@ -1,11 +1,14 @@
 <template>
 <div class="root-header">
   <div class="logo-search">
-    <section class="logo">
+    <section id="logotipo" class="cabecalho">
       <a class="" href="nav-button"><img src="../assets/logo-home.png" alt=""></a>
     </section>
-    <section class="search">
+    <section id="pesquisa" class="cabecalho">
       <input type="text" placeholder="Pesquise itens aqui">
+    </section>
+    <section id="botaodelogin">
+      <button type="submit">login</button>
     </section>
   </div>
   <div class="nav-row">
@@ -24,13 +27,29 @@ export default {};
 </script>
 
 <style>
+
+.root-header section{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#logotipo{
+  width: 10rem;
+  min-width: 10rem;
+  max-width: 10rem;
+  height: 5.25rem;
+  min-height: 1.25rem;
+  max-height: 5.25rem;
+}
+
+.cabecalho{
+  flex: auto; 
+}
 .logo-search{
   justify-content: center;
   display: flex;
 }
-
-.search{
-  display: flex;
+#pesquisa{
   margin: 10px;
 }
 
@@ -65,6 +84,6 @@ img{
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #444;
 }
 </style>
