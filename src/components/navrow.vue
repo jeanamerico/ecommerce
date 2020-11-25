@@ -6,7 +6,8 @@
     </section>
     <section id="pesquisa" class="cabecalho">
       <form class="form-inline">
-        <input class="campopesquisa" type="text" placeholder="Search">
+        <input class="campopesquisa" type="text">
+        <label for="campopesquisa">O que você está procurando?</label>
       </form>
     </section>
     <section id="botaodelogin" class="cabecalho">
@@ -20,6 +21,7 @@
       <li class="nav-button"><a class="nav-button" href="">Mulheres</a></li>
       <li class="nav-button"><a class="nav-button" href="">Esportes</a></li>
       <li class="nav-button"><a class="nav-button" href="">Infantil</a></li>
+      <li class="nav-button"><a class="nav-button" href="">Todas categorias</a></li>
     </ul>
   </div>
 </div>
@@ -56,16 +58,25 @@ export default {};
   margin:10px 0 0 120px;
 }
 
-form{
-  justify-content: center;
-  display: flex;
-}
-
 .campopesquisa{
-  width: 65%;
   height: 35px;
   border: none;
   border-bottom: 1px solid black;
+}
+
+.form-inline {
+  position: relative;
+}
+
+.form-inline label,
+.form-inline input {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-inline input {
+  top: 17px;
 }
 
 input:focus{
