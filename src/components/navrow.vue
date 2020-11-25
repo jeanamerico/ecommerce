@@ -5,10 +5,13 @@
       <a class="" href="nav-button"><img src="../assets/logo-home.png" alt=""></a>
     </section>
     <section id="pesquisa" class="cabecalho">
-      <input type="text" placeholder="Pesquise itens aqui">
+      <form class="form-inline">
+        <input class="campopesquisa" type="text" placeholder="Search">
+      </form>
     </section>
-    <section id="botaodelogin">
-      <button type="submit">login</button>
+    <section id="botaodelogin" class="cabecalho">
+      <a class="botoes" href="">Login</a>
+      <a class="botoes" href="">Carrinho</a>
     </section>
   </div>
   <div class="nav-row">
@@ -50,7 +53,36 @@ export default {};
   display: flex;
 }
 #pesquisa{
-  margin: 10px;
+  margin:10px 0 0 120px;
+}
+
+form{
+  justify-content: center;
+  display: flex;
+}
+
+.campopesquisa{
+  width: 65%;
+  height: 35px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+input:focus{
+  border:none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+#botaodelogin{
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.botoes{
+  margin: 0 25px;
+  text-decoration: none;
 }
 
 ul {
