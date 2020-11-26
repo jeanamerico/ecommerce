@@ -3,15 +3,22 @@
     <div id="nav-row">
       <navrow/>
     </div>
+    <div id="content-page">
+      <contents/>
+    </div>
   </div>
 </template>
 
 <script>
 import navrow from './components/navrow.vue'
+import contents from './components/contents.vue'
+
 
 
 export default {
-  components: { navrow
+  components: { 
+    navrow,
+    contents
   },
 
 }
