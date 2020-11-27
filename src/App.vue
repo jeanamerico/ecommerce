@@ -12,15 +12,11 @@
 <script>
 import navrow from './components/navrow.vue'
 import contents from './components/contents.vue'
-
-
-
 export default {
   components: { 
     navrow,
     contents
   },
-
 }
 </script>
 
@@ -31,5 +27,4 @@ html,body{
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
-
 </style>
