@@ -8,7 +8,8 @@
           :key="i"
           :src="item.src"
           reverse-transition="fade-transition"
-          transition="fade-transition">
+          transition="fade-transition"
+          flex= none>
 
           <v-row class="title fill-height hidden-xs-only" align="center" justify="center">{{ item.title }}</v-row>
         </v-carousel-item>
@@ -34,7 +35,7 @@
           },
            {
             src: require('../assets/img/Banners/backgroud3.jpg'),
-            title: "Pinto de cavalo"
+            title: "As melhores tecnologias para um atendimento melhor"
           },
         ]
       }
@@ -47,7 +48,7 @@
   position: relative;
 
   .v-window {
-    @media only screen and (max-width: 599px) {
+    @media only screen and (max-width: 1320px) {
       height: 220px !important;
     }
   }
@@ -63,6 +64,10 @@
       right: 0;
       z-index: 1;
     }
+  }
+
+  .v-responsive__content{
+    flex:none !important;
   }
 
   .title {
