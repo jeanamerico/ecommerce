@@ -6,16 +6,24 @@
     <div id="content-page">
       <contents/>
     </div>
+    <div id="root-footer">
+      <rodape/>
+    </div>
   </div>
 </template>
 
 <script>
-import navrow from './components/navrow.vue'
-import contents from './components/contents.vue'
+
+import navrow from './components/navrow'
+import contents from './components/contents'
+import rodape from './components/rodape'
+
 export default {
+  name: "app",
   components: { 
     navrow,
-    contents
+    contents,
+    rodape
   },
 }
 </script>
