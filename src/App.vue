@@ -1,6 +1,6 @@
 <template>
   <div class="root-all">
-    <div id="nav-row">
+    <div id="nav-root">
       <navrow/>
     </div>
     <div id="banner-root">

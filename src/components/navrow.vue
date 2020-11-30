@@ -1,23 +1,14 @@
 <template>
   <div class="root-header">
-    <v-bottom-navigation
-    :value="value"
-    color="teal"
-    grow>
-
+    <v-bottom-navigation v-model="value" :background-color="color" dark shift>
       <v-btn>
-        <span>Recents</span>
-        <v-icon>mdi-history</v-icon>
+        <span>Login</span>
+        <v-icon>mdi-account-supervisor-circle-outline</v-icon>
       </v-btn>
 
       <v-btn>
-        <span>Favorites</span>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn>
-        <span>Nearby</span>
-        <v-icon>mdi-map-marker</v-icon>
+        <span>Carrinho</span>
+        <v-icon>mdi-cart-outline</v-icon>
       </v-btn>
     </v-bottom-navigation>
   </div>
@@ -25,18 +16,22 @@
 
 <script>
 export default {
-    data: () => ({ value: 1 }),
-  }
+}
 
 </script>
 
 <style>
 .v-item-group.v-bottom-navigation .v-btn.v-btn--active{
-  color:#009688!important;
+  color:#ffffff!important;
 }
 .v-btn:not(.v-btn--round).v-size--default{
   height: 100% !important;
-      min-width: 64px;
-    padding: 0 16px;
+  min-width: 64px;
+  padding: 0 40px !important;
+}
+
+.v-bottom-navigation{
+  background-color:#009688!important;
+  border-color:#009688!important
 }
 </style>
