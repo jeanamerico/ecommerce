@@ -20,7 +20,7 @@
       </v-btn>
 
       <v-btn>
-        <span>Carrinho</span>
+        <v-badge content="6">Carrinho</v-badge>
         <v-icon>mdi-cart-outline</v-icon>
       </v-btn>
     </v-bottom-navigation>

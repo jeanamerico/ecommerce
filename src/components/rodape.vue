@@ -56,4 +56,7 @@ export default {
   display: flex;
   justify-content: center;
 }
+.v-card__text{
+  background: #009688;
+}
 </style>
