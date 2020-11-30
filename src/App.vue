@@ -3,8 +3,11 @@
     <div id="nav-row">
       <navrow/>
     </div>
-    <div id="content-page">
-      <contents/>
+    <div id="banner-root">
+      <banner/>
+    </div>
+    <div id="products-root">
+      <products/>
     </div>
     <div id="root-footer">
       <rodape/>
@@ -15,14 +18,16 @@
 <script>
 
 import navrow from './components/navrow'
-import contents from './components/contents'
+import banner from './components/banner'
+import products from './components/products'
 import rodape from './components/rodape'
 
 export default {
   name: "app",
   components: { 
     navrow,
-    contents,
+    banner,
+    products,
     rodape
   },
 }
