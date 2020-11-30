@@ -1,21 +1,24 @@
 <template>
-  <div class="root-content">
-    <div class="banners">
-      <v-carousel cycle hide-delimiters
-      :show-arrows ="false">
-        <v-carousel-item
-          v-for="(item,i) in items"
-          :key="i"
-          :src="item.src"
-          reverse-transition="fade-transition"
-          transition="fade-transition"
-          flex= none>
+  <div class="banners">
+    <v-carousel
+      cycle
+      height="400"
+      hide-delimiters
+      :show-arrows ="false"
+      >
 
-          <v-row class="title fill-height hidden-xs-only" align="center" justify="center">{{ item.title }}</v-row>
-        </v-carousel-item>
-      </v-carousel>
-    </div>
-    <div class="produtos"></div>
+      <v-carousel-item
+        v-for="(item, i) in items"
+        :key="i"
+        :src="item.src">
+          <v-row
+            class="title fill-height hidden-xs-only"
+            align="center"
+            justify="center">
+              {{ item.title }}
+          </v-row>
+      </v-carousel-item>
+    </v-carousel>
   </div>
 </template>
 
