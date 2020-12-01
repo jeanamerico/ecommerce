@@ -30,7 +30,7 @@
 
     <div class="row-service">
       <template>
-        <v-tabs align-with-title>
+        <v-tabs  align-with-title>
           <v-tab>Mulheres</v-tab>
           <v-tab>Homens</v-tab>
           <v-tab>Infantil</v-tab>
@@ -75,5 +75,12 @@ export default {
 .v-bottom-navigation{
   background-color:#009688!important;
   border-color:#009688!important
+}
+
+@media (min-width: 960px){
+  .col-md-3 {
+    flex: 0 0 40% !important;
+    max-width: 40% !important;
+  }
 }
 </style>
