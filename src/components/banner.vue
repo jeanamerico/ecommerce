@@ -50,12 +50,6 @@
 .banners {
   position: relative;
 
-  .v-window {
-    @media only screen and (max-width: 1320px) {
-      height: 220px !important;
-    }
-  }
-
   .v-image__image {
     &:before {
       content: '';
