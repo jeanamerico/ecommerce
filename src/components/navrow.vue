@@ -15,10 +15,24 @@
           label="O que você está procurando?"
         ></v-text-field>
       </v-col>
+        <div>
+          Logged in
+          <div v-if="loggedIn">Yes</div>
+          <div v-else>No</div>
+          <button class="but" @click="signOut">Sign out</button>
+        </div>
 
+      <div>
+        <router-link to="/login">Login</router-link> |
+        <router-link to="/register">register</router-link> |
+        <router-link to="/secret">secret</router-link> |
+        <router-link to="/navrow">About</router-link> 
+        
+      </div> 
+        <router-view/>
       <v-btn>
-        <span>Login</span>
-        <v-icon>mdi-account-supervisor-circle-outline</v-icon>
+        
+        <!--<v-icon>mdi-account-supervisor-circle-outline</v-icon>-->
       </v-btn>
 
       <v-btn>
@@ -30,7 +44,7 @@
 
     <div class="row-service">
       <template>
-        <v-tabs  align-with-title>
+        <v-tabs align-with-title>
           <v-tab>Mulheres</v-tab>
           <v-tab>Homens</v-tab>
           <v-tab>Infantil</v-tab>
@@ -43,9 +57,43 @@
 </template>
 
 <script>
-export default {
-}
+import firebase from '@firebase/app';
+require('firebase/auth');
 
+export default {
+  name: "top-header",
+  mounted() {
+    this.setupFirebase();
+  },
+  methods: {
+    setupFirebase() {
+      firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+          // User is signed in.
+          console.log("signed in");
+          this.loggedIn = true;
+        } else {
+          // No user is signed in.
+          this.loggedIn = false;
+          console.log("signed out", this.loggedIn);
+        }
+      });
+    },
+    signOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.replace({ name: "login" });
+        });
+    }
+  },
+  data() {
+    return {
+      loggedIn: false
+    };
+  }
+};
 </script>
 
 <style>
