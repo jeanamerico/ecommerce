@@ -2,10 +2,10 @@
   <div class="root-register">
     <div v-if="error" class="error">{{error.message}}</div>
     <form @submit.prevent="pressed">
-      <div class="email">
+      <div id="login">
         <input type="email" v-model="email" placeholder="email">
       </div>
-      <div class="password">
+      <div id="password">
         <input type="password" v-model="password" placeholder="Senha">
       </div>
       <button type="submit">Registrar</button>

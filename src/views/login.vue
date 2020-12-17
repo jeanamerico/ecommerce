@@ -1,11 +1,11 @@
 <template>
   <div class="root-login">
     <form @submit.prevent="pressed">
-      <div class="login">
-        <input type="email" v-model="email" placeholder="email">
+      <div id="login">
+        <input class="inputlogin" type="email" v-model="email" placeholder="email">
       </div>
-      <div class="password">
-        <input type="password" v-model="password" placeholder="Senha">
+      <div id="password">
+        <input class="inputpasswd" type="password" v-model="password" placeholder="Senha">
       </div>
       <button>entrar</button>
     </form>
@@ -44,5 +44,9 @@ export default {
 </script>
 
 <style>
+#login, #password{
+  background-color: #fff !important;
+  border-radius: 7px;
+}
 
 </style>

@@ -23,21 +23,21 @@
         </div>
 
       <div>
-        <router-link to="/login">Login</router-link> |
-        <router-link to="/register">register</router-link> |
-        <router-link to="/secret">secret</router-link> |
-        <router-link to="/navrow">About</router-link> 
-        
-      </div> 
         <router-view/>
-      <v-btn>
+      </div> 
         
-        <!--<v-icon>mdi-account-supervisor-circle-outline</v-icon>-->
+      <v-btn>
+        <v-icon>mdi-account-supervisor-circle-outline</v-icon>
+        <v-badge>
+          <router-link to="/login">Login</router-link>
+          <router-link to="/register">register</router-link>
+        </v-badge>
+
       </v-btn>
 
       <v-btn>
-        <v-badge content="6">Carrinho</v-badge>
         <v-icon>mdi-cart-outline</v-icon>
+        <v-badge content="6">Carrinho</v-badge>
       </v-btn>
     </v-bottom-navigation>
     
