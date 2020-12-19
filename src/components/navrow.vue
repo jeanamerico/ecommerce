@@ -30,7 +30,6 @@
         <v-icon>mdi-account-supervisor-circle-outline</v-icon>
         <v-badge>
           <router-link to="/login">Login</router-link>
-          <router-link to="/register">register</router-link>
         </v-badge>
 
       </v-btn>
@@ -118,6 +117,11 @@ export default {
   height: 100% !important;
   min-width: 64px;
   padding: 0 40px !important;
+}
+
+.router-link-exact-active.router-link-active{
+  color: white;
+  text-decoration: none;
 }
 
 .v-bottom-navigation{

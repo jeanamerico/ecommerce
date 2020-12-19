@@ -7,7 +7,8 @@
       <div id="password">
         <input class="inputpasswd" type="password" v-model="password" placeholder="Senha">
       </div>
-      <button>entrar</button>
+      <button>Login</button>
+      <router-link to="/register" class="registerb"> Não tenho um login</router-link>
     </form>
     <div v-if="error" class="error">{{error.message}}</div>
   
@@ -47,6 +48,11 @@ export default {
 #login, #password{
   background-color: #fff !important;
   border-radius: 7px;
+}
+
+.registerb{
+  text-decoration: none;
+  color: white  ;
 }
 
 </style>
