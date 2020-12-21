@@ -15,12 +15,6 @@
           label="O que você está procurando?"
         ></v-text-field>
       </v-col>
-        <div>
-          Logged in
-          <div v-if="loggedIn">Yes</div>
-          <div v-else>No</div>
-          <button class="but" @click="signOut">Sign out</button>
-        </div>
 
       <div>
         <router-view/>
@@ -29,7 +23,8 @@
       <v-btn>
         <v-icon>mdi-account-supervisor-circle-outline</v-icon>
         <v-badge>
-          <router-link to="/login">Login</router-link>
+          <div v-if="loggedIn"><button class="but" @click="signOut">Sign out</button></div>
+          <div v-else><router-link to="/login" class="registerb">Login</router-link></div>
         </v-badge>
 
       </v-btn>

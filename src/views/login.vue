@@ -50,9 +50,15 @@ export default {
   border-radius: 7px;
 }
 
+.inputlogin, .inputpasswd{
+  width: 100%;
+}
+
 .registerb{
   text-decoration: none;
-  color: white  ;
+  color: white;
+  justify-content: flex-start;
+  display: flex;
 }
 
 </style>

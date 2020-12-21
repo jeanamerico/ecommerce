@@ -3,10 +3,10 @@
     <div v-if="error" class="error">{{error.message}}</div>
     <form @submit.prevent="pressed">
       <div id="login">
-        <input type="email" v-model="email" placeholder="email">
+        <input class="inputlogin" type="email" v-model="email" placeholder="email">
       </div>
       <div id="password">
-        <input type="password" v-model="password" placeholder="Senha">
+        <input class="inputpasswd" type="password" v-model="password" placeholder="Senha">
       </div>
       <button type="submit">Registrar</button>
       <router-link to="/login" class="registerb"> Retornar para login</router-link>
