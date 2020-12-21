@@ -21,7 +21,9 @@
       </div> 
         
       <v-btn>
-        <v-icon>mdi-account-supervisor-circle-outline</v-icon>
+        <v-icon v-if="loggedIn">mdi-account-circle</v-icon>
+        <v-icon v-else>mdi-account-circle</v-icon>
+
         <v-badge>
           <div v-if="loggedIn"><button class="but" @click="signOut">Sign out</button></div>
           <div v-else><router-link to="/login" class="registerb">Login</router-link></div>
